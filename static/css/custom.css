@@ -1,0 +1,21 @@
+#book-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#book-list .card {
+    width: 130px;
+    margin: 0.125em;
+}
+
+#book-list .card-body {
+    padding: 5pt;
+    font-size: 11pt;
+}
+
+#book-detail img {
+    max-width: 100%;
+    padding: 0.25em;
+    box-sizing: border-box;
+    box-shadow: 0 0.125em 0.125em rgba(0,0,0,0.2);
+}

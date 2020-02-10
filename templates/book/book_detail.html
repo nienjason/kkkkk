@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="mb-2">
+  <a href="{% url 'book_edit' book.id %}" class="btn btn-sm btn-primary">
+    <i class="fas fa-edit"></i> 修改
+  </a>
+  <a href="{% url 'book_delete' book.id %}" class="btn btn-sm btn-danger">
+    <i class="fas fa-trash"></i> 刪除
+  </a>
+</div>
+<div id="book-detail">
+  <div class="row">
+    <div class="col-4">
+      <img src="{{ book.preface.url }}" alt="{{ book.title }}">
+    </div>
+    <div class="col-8">
+      <table class="table table-sm">
+        <tr>
+          <th>書名</th>
+          <td>{{ book.title }}</td>
+        </tr>
+        <tr>
+          <th>作者</th>
+          <td>{{ book.author }}</td>
+        </tr>
+        <tr>
+          <th>出版社</th>
+          <td>{{ book.publisher }}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
+{% endblock %}
