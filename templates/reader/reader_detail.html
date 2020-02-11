@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div id="reader-detail">
+  <table class="table table-sm">
+    <tr>
+      <th>姓名</th>
+      <td>{{ reader.realname }}</td>
+    </tr>
+    <tr>
+      <th>電話</th>
+      <td>{{ reader.tel }}</td>
+    </tr>
+    <tr>
+      <th>電子信箱</th>
+      <td>{{ reader.email }}</td>
+    </tr>
+  </table>
+</div>
+{% endblock %}
