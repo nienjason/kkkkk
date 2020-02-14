@@ -25,6 +25,7 @@ urlpatterns = [
     path('', RedirectView.as_view(url='book/')),
     path('book/', include('book.urls')),
     path('reader/', include('reader.urls')),
+    path('log/', include('log.urls')),
 ]
 
 # 加入靜態檔案的處理規則

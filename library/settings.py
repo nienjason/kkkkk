@@ -128,4 +128,3 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')    # 上傳檔案儲存資料夾
 
 LOGIN_URL = '/user/login/'  # 登入頁面路徑
 LOGIN_REDIRECT_URL = '/'    # 使用者登人後導向至首頁
-

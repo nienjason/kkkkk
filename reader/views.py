@@ -7,7 +7,7 @@ from .models import *
 class ReaderList(LoginRequiredMixin, ListView):     # 讀者列表
     model = Reader
     ordering = ['realname']     # 依姓名排序
-    paginate_by = 1
+    paginate_by = 20
 
 class ReaderView(LoginRequiredMixin, DetailView):   # 檢視讀者
     model = Reader
