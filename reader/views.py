@@ -2,6 +2,7 @@ from django.urls import reverse_lazy
 from django.views.generic import *
 from django.contrib.auth.mixins import LoginRequiredMixin
 from .models import *
+from log.models import Log
 
 # Create your views here.
 class ReaderList(LoginRequiredMixin, ListView):     # 讀者列表
@@ -11,6 +12,13 @@ class ReaderList(LoginRequiredMixin, ListView):     # 讀者列表
 
 class ReaderView(LoginRequiredMixin, DetailView):   # 檢視讀者
     model = Reader
+
+    def get_context_data(self, **kwargs):
+        ctx = super().get_context_data(**kwargs)
+        ctx['log_list'] = Log.objects.filter(
+            reader=self.object
+        ).order_by('-id').select_related('book')
+        return ctx
 
 class ReaderAdd(LoginRequiredMixin, CreateView):    # 新增讀者
     model = Reader
