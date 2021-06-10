@@ -13,10 +13,10 @@ from django.db.models import *
 
 # 圖書
 class Book(Model):
-    title = CharField('書名', max_length=255)
-    author = CharField('作者', max_length=255)
-    publisher = CharField('出版社', max_length=255)
-    preface = ImageField('封面圖片')
+    title = CharField('借用人', max_length=255)
+    author = CharField('機器型號', max_length=255)
+    publisher = CharField('設備', max_length=255)
+    preface = ImageField('筆電照片')
 
     def __str__(self):
         return "{}: {}".format(self.author, self.title)

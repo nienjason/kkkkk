@@ -15,9 +15,9 @@ class Migration(migrations.Migration):
             name='Book',
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('title', models.CharField(max_length=255, verbose_name='書名')),
-                ('author', models.CharField(max_length=255, verbose_name='作者')),
-                ('publisher', models.CharField(max_length=255, verbose_name='出版社')),
+                ('title', models.CharField(max_length=255, verbose_name='借用人')),
+                ('author', models.CharField(max_length=255, verbose_name='機器型號')),
+                ('publisher', models.CharField(max_length=255, verbose_name='設備')),
             ],
         ),
     ]

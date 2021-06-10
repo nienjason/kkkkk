@@ -1,7 +1,7 @@
 <!-- Navbar begin //-->
 <nav class="navbar navbar-expand-md navbar-dark bg-info mb-2">
   <!-- 網站標誌 -->
-  <div class="navbar-brand">圖書借閱系統</div>
+  <div class="navbar-brand">K中借位系統</div>
   <!-- 在小螢幕的設備上顯示可展開/收合導覽選單的按鈕 -->
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
     <span class="navbar-toggler-icon"></span>
@@ -12,17 +12,17 @@
       {% if user.is_authenticated %}
       <li class="nav-item">
         <a href="{% url 'book_list' %}" class="nav-link">
-          <i class="fas fa-book"></i> 圖書列表
+          <i class="fas fa-book"></i> 座位表
         </a>
       </li>
       <li class="nav-item">
         <a href="{% url 'reader_list' %}" class="nav-link">
-          <i class="fas fa-book-reader"></i> 讀者列表
+          <i class="fas fa-book-reader"></i> 借者列表
         </a>
       </li>
       <li class="nav-item">
         <a href="{% url 'log_list' %}" class="nav-link">
-          <i class="fas fa-list"></i> 借閱紀錄
+          <i class="fas fa-list"></i> 學生借位記錄
         </a>
       </li>
       <li class="nav-item">

@@ -3,19 +3,19 @@
 {% block content %}
 <div class="mb-1">
   <a href="{% url 'checkout_reader' %}" class="btn btn-sm btn-primary">
-    <i class="fas fa-address-book"></i> 借書
+    <i class="fas fa-address-book"></i> 借出
   </a>
   <a href="{% url 'return_book' %}" class="btn btn-sm btn-primary">
-    <i class="fas fa-undo"></i> 還書
+    <i class="fas fa-undo"></i> 歸還
   </a>
 </div>
 <div id="log-list">
   <table class="table table-sm">
     <thead>
       <tr>
-        <th>借閱時間</th>
-        <th>書籍</th>
-        <th>借閱人</th>
+        <th>借出時間</th>
+        <th>筆電</th>
+        <th>借出人</th>
         <th>歸還時間</th>
       </tr>
     </thead>

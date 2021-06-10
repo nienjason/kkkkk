@@ -5,7 +5,7 @@ from django.db.models import *
 class Reader(Model):
     realname = CharField('姓名', max_length=32)
     tel = CharField('聯絡電話', max_length=255)
-    email = EmailField('電子信箱')
+    email = CharField('座位編號', max_length=60)
 
     def __str__(self):
         return "{} / {} / {}".format(

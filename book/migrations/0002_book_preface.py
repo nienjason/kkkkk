@@ -13,6 +13,6 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='book',
             name='preface',
-            field=models.ImageField(blank=True, null=True, upload_to='', verbose_name='封面圖片'),
+            field=models.ImageField(blank=True, null=True, upload_to='', verbose_name='筆電照片'),
         ),
     ]
